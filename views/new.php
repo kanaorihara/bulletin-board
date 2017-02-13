@@ -26,7 +26,7 @@ if(isset($_POST['create'])) {
     mysqli_stmt_close($stmt);
     mysqli_close($dbh);
 
-    header('Location: /index.php');
+    header('Location: index.php');
     exit;
 }
 
@@ -35,6 +35,7 @@ if(isset($_POST['create'])) {
 <!DOCTYPE html>
 <html lang="ja">
 <head>
+    <link rel="stylesheet" type="text/css" href="../css/common.css">
 </head>
 
 <body>
@@ -50,11 +51,11 @@ if(isset($_POST['create'])) {
         </div>
         <div>
             <label>コメント</label>
-            <textarea name="comment"><?php if($comment) echo $comment ?></textarea>
+            <textarea name="comment" rows="5"><?php if($comment) echo $comment ?></textarea>
         </div>
         <div>
-            <input type="button" name="return" value="キャンセル" onclick="location.href='index.php'">
-            <input type="submit" name="create" value="作成">
+            <input type="button" name="return" value="キャンセル" class="cansel" onclick="location.href='index.php'">
+            <input type="submit" name="create" value="作成" class="new">
         </div>
     </form>
 </body>

@@ -35,7 +35,7 @@ if (isset($_POST['delete_yes'])) {
     }
     mysqli_close($dbh);
 
-    header('Location: /index.php');
+    header('Location: index.php');
     exit;
 }
 
@@ -43,15 +43,15 @@ if (isset($_POST['delete_yes'])) {
 
 <!DOCTYPE html>
 <html>
-
+    <link rel="stylesheet" type="text/css" href="../css/common.css">
 </html>
 
 <body>
     <p>本当に削除しますか？</p>
     <form action="delete.php" method="POST" enctype="multipart/form-data">
     <div>
-        <input type="button" name="delete_no" value="いいえ" onclick="location.href='index.php'">
-        <input type="submit" name="delete_yes[<?php if($articleId) echo $articleId; ?>]" value="はい">
+        <input type="button" name="delete_no" value="いいえ" class="cansel" onclick="location.href='index.php'">
+        <input type="submit" name="delete_yes[<?php if($articleId) echo $articleId; ?>]" value="はい" class="delete">
     </div>
     </form>
 </body>

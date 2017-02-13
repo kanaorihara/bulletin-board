@@ -30,15 +30,14 @@ if (isset($_GET['id'])) {
 }
 
 if (isset($_POST['edit'])) {
-    $query = "update articles set title = ?, author = ?, comment = ? updated_at = ? where id = ?";
+    $query = "update articles set title = ?, author = ?, comment = ?, updated_at = ? where id = ?";
     $stmt = mysqli_prepare($dbh, $query);
-    var_dump($stmt);
     mysqli_stmt_bind_param($stmt, 'ssssd', $_POST['title'], $_POST['author'], $_POST['comment'], $date, $_POST['id']);
     mysqli_stmt_execute($stmt);
     mysqli_stmt_close($stmt);
     mysqli_close($dbh);
 
-    header('Location: /index.php');
+    header('Location: index.php');
     exit;
 }
 
@@ -47,6 +46,7 @@ if (isset($_POST['edit'])) {
 <!DOCTYPE html>
 <html>
 <head>
+    <link rel="stylesheet" type="text/css" href="../css/common.css">
 </head>
 
 <body>
@@ -63,11 +63,11 @@ if (isset($_POST['edit'])) {
         </div>
         <div>
             <label>コメント</label>
-            <textarea name="comment"><?php if($comment) echo $comment; ?></textarea>
+            <textarea name="comment" rows="5"><?php if($comment) echo $comment; ?></textarea>
         </div>
         <div>
-            <input type="button" name="return" value="キャンセル" onclick="location.href='index.php'">
-            <input type="submit" name="edit" value="編集">
+            <input type="button" name="return" value="キャンセル" class="cansel" onclick="location.href='index.php'">
+            <input type="submit" name="edit" value="編集" class="edit">
         </div>
     </form>
 </body>

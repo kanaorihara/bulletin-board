@@ -17,10 +17,11 @@ $articlesCount = mysqli_num_rows($articles);
 
 <!DOCTYPE html>
 <head>
+    <link rel="stylesheet" type="text/css" href="../css/common.css">
 </head>
 <body>
     <h1>掲示版</h1>
-    <input type="button" name="new" value="新規作成" onclick="location.href='new.php'">
+    <input type="button" name="new" value="新規作成" class="new" onclick="location.href='./new.php'">
     <?php if (empty($articlesCount)) { ?>
     <p>記事がありません。新規作成ボタンから作成してください。</p>
     <?php } else { ?>
@@ -42,8 +43,8 @@ $articlesCount = mysqli_num_rows($articles);
                 <td><?php echo $article['author'] ?></td>
                 <td><?php echo $article['comment'] ?></td>
                 <td>
-                    <input type="submit" name="edit" value="編集" onclick="location.href='edit.php?id=<?php echo $article['id']?>'">
-                    <input type="submit" name="delete" value="削除" onclick="location.href='delete.php?id=<?php echo $article['id']?>'">
+                    <input type="button" name="edit" value="編集" class="edit" onclick="location.href='./edit.php?id=<?php echo $article['id']?>'">
+                    <input type="button" name="delete" value="削除" class="delete" onclick="location.href='./delete.php?id=<?php echo $article['id']?>'">
                 </td>
             </tr>
             <?php } ?>

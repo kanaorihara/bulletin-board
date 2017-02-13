@@ -1,0 +1,62 @@
+body {
+    font-size: 14px;
+    color: #666;
+    margin: 20px 30px;
+}
+
+table {
+    border: solid 1px #ccc;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+table tr {
+    border: dashed 1px #ddd;
+}
+
+table th, table td {
+    padding: 10px 20px;
+}
+
+input[type="button"], input[type="submit"] {
+    padding: 6px 10px;
+    border-radius: 3px;
+    background: #fafafa;
+}
+
+form div {
+    margin: 10px 0;
+}
+
+label {
+    display: inline-block;
+    width: 120px;
+    vertical-align: top;
+}
+
+input[type="text"], textarea {
+    border: solid 1px #ddd;
+    padding: 6px 10px;
+    border-radius: 3px;
+    width: 300px;
+}
+
+.cansel {
+    border: solid 1px #666;
+    color: #666;
+}
+
+.new {
+    border: solid 1px #00BFFF;
+    color: #00BFFF;
+}
+
+.edit {
+    border: solid 1px #FFA500;
+    color: #FFA500;
+}
+
+.delete {
+    border: solid 1px #DC143C;
+    color: #DC143C;
+}
