@@ -26,7 +26,7 @@ $articlesCount = mysqli_num_rows($articles);
     <p>記事がありません。新規作成ボタンから作成してください。</p>
     <?php } else { ?>
     <table>
-        <thread>
+        <thead>
             <tr>
                 <th>日付</th>
                 <th>タイトル</th>
@@ -34,7 +34,7 @@ $articlesCount = mysqli_num_rows($articles);
                 <th>コメント</th>
                 <th></th>
             </tr>
-        </thread>
+        </thead>
         <tbody>
             <?php foreach ($articles as $article) { ?>
             <tr>

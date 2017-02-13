@@ -25,6 +25,10 @@ input[type="button"], input[type="submit"] {
     background: #fafafa;
 }
 
+input[type="button"]:hover, input[type="submit"]:hover {
+    opacity: 0.6;
+}
+
 form div {
     margin: 10px 0;
 }
