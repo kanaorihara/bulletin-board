@@ -15,7 +15,6 @@ $date = date('Y-m-d H:i:s');
 
 $stmt = $query = null;
 
-$article = [];
 $articleId = $title = $author = $comment = null;
 if (isset($_GET['id'])) {
     $articleId = $_GET['id'];
@@ -40,11 +39,10 @@ if (isset($_POST['edit'])) {
     header('Location: index.php');
     exit;
 }
-
 ?>
 
 <!DOCTYPE html>
-<html>
+<html lang="ja">
 <head>
     <link rel="stylesheet" type="text/css" href="../css/common.css">
 </head>
@@ -71,5 +69,4 @@ if (isset($_POST['edit'])) {
         </div>
     </form>
 </body>
-
 </html>

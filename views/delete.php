@@ -31,20 +31,19 @@ if (isset($_POST['delete_yes'])) {
         mysqli_stmt_bind_param($stmt, 'd', $id);
         mysqli_stmt_execute($stmt);
         mysqli_stmt_close($stmt);
-        mysqli_close($dbh);
     }
     mysqli_close($dbh);
 
     header('Location: index.php');
     exit;
 }
-
 ?>
 
 <!DOCTYPE html>
-<html>
+<html lang="ja">
+<head>
     <link rel="stylesheet" type="text/css" href="../css/common.css">
-</html>
+</head>
 
 <body>
     <p>本当に削除しますか？</p>
@@ -55,3 +54,4 @@ if (isset($_POST['delete_yes'])) {
     </div>
     </form>
 </body>
+</html>

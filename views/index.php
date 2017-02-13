@@ -16,6 +16,7 @@ $articlesCount = mysqli_num_rows($articles);
 ?>
 
 <!DOCTYPE html>
+<html lang="ja">
 <head>
     <link rel="stylesheet" type="text/css" href="../css/common.css">
 </head>
@@ -52,3 +53,4 @@ $articlesCount = mysqli_num_rows($articles);
     </table>
     <?php } ?>
 </body>
+</html>
