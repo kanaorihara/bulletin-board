@@ -6,7 +6,7 @@
  * Time: 23:37
  */
 
-require_once '../classes/ConnectionDB.php';
+require_once '../class/ConnectionDB.php';
 
 $dbh = ConnectionDB::getConnection();
 

@@ -6,7 +6,7 @@
  * Time: 0:07
  */
 
-require_once '../classes/ConnectionDB.php';
+require_once '../class/ConnectionDB.php';
 
 $dbh = ConnectionDB::getConnection();
 $query = 'select * from articles where delete_flag is null order by created_at DESC';
