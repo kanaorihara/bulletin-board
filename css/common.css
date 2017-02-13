@@ -16,6 +16,7 @@ table tr {
 
 table th, table td {
     padding: 10px 20px;
+    text-align: left;
 }
 
 input[type="button"], input[type="submit"] {

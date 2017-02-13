@@ -21,7 +21,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/index.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="690">
@@ -76,8 +76,8 @@
       <file leaf-file-name="new.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/new.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="855">
-              <caret line="57" column="68" selection-start-line="57" selection-start-column="68" selection-end-line="57" selection-end-column="68" />
+            <state relative-caret-position="360">
+              <caret line="24" column="31" selection-start-line="24" selection-start-column="31" selection-end-line="24" selection-end-column="31" />
               <folding>
                 <element signature="e#6#86#0#PHP" expanded="true" />
                 <marker date="1486970046000" expanded="true" signature="421:490" ph="insert into articles... " />
@@ -99,11 +99,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="common.css" pinned="false" current-in-tab="false">
+      <file leaf-file-name="common.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/css/common.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="3" column="18" selection-start-line="3" selection-start-column="18" selection-end-line="3" selection-end-column="18" />
+            <state relative-caret-position="270">
+              <caret line="18" column="20" selection-start-line="18" selection-start-column="20" selection-end-line="18" selection-end-column="20" />
               <folding />
             </state>
           </provider>
@@ -191,20 +191,6 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bulletin-board" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bulletin-board" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
@@ -280,12 +266,12 @@
       <option name="presentableId" value="Default" />
       <updated>1486652804383</updated>
       <workItem from="1486652806326" duration="13540000" />
-      <workItem from="1486882191519" duration="10272000" />
+      <workItem from="1486882191519" duration="11263000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="23812000" />
+    <option name="totallyTimeSpent" value="24803000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="773" extended-state="6" />
@@ -334,11 +320,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/common.css">
+    <entry file="file://$PROJECT_DIR$/views/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="18" selection-start-line="3" selection-start-column="18" selection-end-line="3" selection-end-column="18" />
-          <folding />
+        <state relative-caret-position="690">
+          <caret line="46" column="79" selection-start-line="46" selection-start-column="79" selection-end-line="46" selection-end-column="79" />
+          <folding>
+            <element signature="e#6#85#0#PHP" expanded="true" />
+            <marker date="1486969534000" expanded="true" signature="180:253" ph="select * fro... articles" />
+            <marker date="1486969534000" expanded="true" signature="681:1023" ph="..." />
+            <marker date="1486969534000" expanded="true" signature="698:894" ph="..." />
+            <marker date="1486969534000" expanded="true" signature="715:876" ph="..." />
+            <marker date="1486969534000" expanded="true" signature="910:1023" ph="..." />
+            <marker date="1486969534000" expanded="true" signature="982:1023" ph="..." />
+            <marker date="1486969534000" expanded="true" signature="1239:1240" ph="..." />
+            <marker date="1486969534000" expanded="true" signature="1239:1304" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -372,8 +368,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/views/new.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="855">
-          <caret line="57" column="68" selection-start-line="57" selection-start-column="68" selection-end-line="57" selection-end-column="68" />
+        <state relative-caret-position="360">
+          <caret line="24" column="31" selection-start-line="24" selection-start-column="31" selection-end-line="24" selection-end-column="31" />
           <folding>
             <element signature="e#6#86#0#PHP" expanded="true" />
             <marker date="1486970046000" expanded="true" signature="421:490" ph="insert into articles... " />
@@ -392,21 +388,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/index.php">
+    <entry file="file://$PROJECT_DIR$/css/common.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="690">
-          <caret line="46" column="79" selection-start-line="46" selection-start-column="79" selection-end-line="46" selection-end-column="79" />
-          <folding>
-            <element signature="e#6#85#0#PHP" expanded="true" />
-            <marker date="1486969534000" expanded="true" signature="180:253" ph="select * fro... articles" />
-            <marker date="1486969534000" expanded="true" signature="681:1023" ph="..." />
-            <marker date="1486969534000" expanded="true" signature="698:894" ph="..." />
-            <marker date="1486969534000" expanded="true" signature="715:876" ph="..." />
-            <marker date="1486969534000" expanded="true" signature="910:1023" ph="..." />
-            <marker date="1486969534000" expanded="true" signature="982:1023" ph="..." />
-            <marker date="1486969534000" expanded="true" signature="1239:1240" ph="..." />
-            <marker date="1486969534000" expanded="true" signature="1239:1304" ph="..." />
-          </folding>
+        <state relative-caret-position="270">
+          <caret line="18" column="20" selection-start-line="18" selection-start-column="20" selection-end-line="18" selection-end-column="20" />
+          <folding />
         </state>
       </provider>
     </entry>
