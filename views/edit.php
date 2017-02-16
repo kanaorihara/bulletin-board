@@ -8,34 +8,17 @@
 
 require_once '../class/ConnectionDB.php';
 
-$dbh = ConnectionDB::getConnection();
+$dbConnect = new ConnectionDB();
 
-date_default_timezone_set('Asia/Tokyo');
-$date = date('Y-m-d H:i:s');
-
-$stmt = $query = null;
-
+$article = [];
 $articleId = $title = $author = $comment = null;
 if (isset($_GET['id'])) {
     $articleId = $_GET['id'];
-    $query = 'select * from articles where id = ?';
-    $stmt = mysqli_prepare($dbh, $query);
-    mysqli_stmt_bind_param($stmt, 'd', $articleId);
-    mysqli_stmt_execute($stmt);
-    mysqli_stmt_bind_result($stmt, $id, $title, $author, $comment, $delete_flag, $created_at, $updated_at);
-    mysqli_stmt_fetch($stmt);
-    mysqli_stmt_close($stmt);
-    mysqli_close($dbh);
+    $article = $dbConnect->findByArticleId($articleId);
 }
 
 if (isset($_POST['edit'])) {
-    $query = "update articles set title = ?, author = ?, comment = ?, updated_at = ? where id = ?";
-    $stmt = mysqli_prepare($dbh, $query);
-    mysqli_stmt_bind_param($stmt, 'ssssd', $_POST['title'], $_POST['author'], $_POST['comment'], $date, $_POST['id']);
-    mysqli_stmt_execute($stmt);
-    mysqli_stmt_close($stmt);
-    mysqli_close($dbh);
-
+    $dbConnect->update($_POST['title'], $_POST['author'], $_POST['comment'], $_POST['id']);
     header('Location: index.php');
     exit;
 }
@@ -53,15 +36,15 @@ if (isset($_POST['edit'])) {
         <input type="hidden" name="id" value="<?php echo $articleId; ?>">
         <div>
             <label>タイトル</label>
-            <input type="text" name="title" value="<?php if($title) echo $title; ?>">
+            <input type="text" name="title" value="<?php if($article['title']) echo $article['title']; ?>">
         </div>
         <div>
             <label>投稿者</label>
-            <input type="text" name="author" value="<?php if($author) echo $author; ?>">
+            <input type="text" name="author" value="<?php if($article['author']) echo $article['author']; ?>">
         </div>
         <div>
             <label>コメント</label>
-            <textarea name="comment" rows="5"><?php if($comment) echo $comment; ?></textarea>
+            <textarea name="comment" rows="5"><?php if($article['comment']) echo $article['comment']; ?></textarea>
         </div>
         <div>
             <input type="button" name="return" value="キャンセル" class="cansel" onclick="location.href='index.php'">

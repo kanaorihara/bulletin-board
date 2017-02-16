@@ -8,7 +8,7 @@
 
 require_once '../class/ConnectionDB.php';
 
-$dbh = ConnectionDB::getConnection();
+$dbConnect = new ConnectionDB();
 
 $articleId = null;
 if (isset($_GET['id'])) {
@@ -17,23 +17,11 @@ if (isset($_GET['id'])) {
 
 if (isset($_POST['delete_yes'])) {
     $articleId = key($_POST['delete_yes']);
-    $query = 'select * from articles where id = ?';
+    $article = $dbConnect->findByArticleId($articleId);
 
-    $stmt = mysqli_prepare($dbh, $query);
-    mysqli_stmt_bind_param($stmt, 'd', $articleId);
-    mysqli_stmt_execute($stmt);
-    mysqli_stmt_bind_result($stmt, $id, $title, $author, $comment, $delete_flag, $created_at, $updated_at);
-    mysqli_stmt_fetch($stmt);
-    mysqli_stmt_close($stmt);
-    if ($id) {
-        $query = 'update articles set delete_flag = 1 where id = ?';
-        $stmt = mysqli_prepare($dbh, $query);
-        mysqli_stmt_bind_param($stmt, 'd', $id);
-        mysqli_stmt_execute($stmt);
-        mysqli_stmt_close($stmt);
+    if ($article['id']) {
+        $dbConnect->delete($article['id']);
     }
-    mysqli_close($dbh);
-
     header('Location: index.php');
     exit;
 }

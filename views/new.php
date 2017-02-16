@@ -8,24 +8,11 @@
 
 require_once '../class/ConnectionDB.php';
 
-$dbh = ConnectionDB::getConnection();
-
-date_default_timezone_set('Asia/Tokyo');
-$date = date('Y-m-d H:i:s');
+$dbConnect = new ConnectionDB();
 
 $title =  $author = $comment = null;
-
 if(isset($_POST['create'])) {
-    $title = $_POST['title'];
-    $author = $_POST['author'];
-    $comment = $_POST['comment'];
-    $query = 'insert into articles(title,author,comment,created_at) values(?,?,?,?)';
-    $stmt = mysqli_prepare($dbh, $query);
-    mysqli_stmt_bind_param($stmt, 'ssss', $_POST['title'], $_POST['author'], $_POST['comment'], $date);
-    mysqli_stmt_execute($stmt);
-    mysqli_stmt_close($stmt);
-    mysqli_close($dbh);
-
+    $dbConnect->insert($_POST['title'], $_POST['author'], $_POST['comment']);
     header('Location: index.php');
     exit;
 }

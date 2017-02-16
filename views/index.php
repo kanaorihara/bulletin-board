@@ -8,11 +8,9 @@
 
 require_once '../class/ConnectionDB.php';
 
-$dbh = ConnectionDB::getConnection();
-$query = 'select * from articles where delete_flag is null order by created_at DESC';
+$dbConnect = new ConnectionDB();
+$articles = $dbConnect->getAll();
 
-$articles = mysqli_query($dbh, $query);
-$articlesCount = mysqli_num_rows($articles);
 ?>
 
 <!DOCTYPE html>
@@ -23,7 +21,7 @@ $articlesCount = mysqli_num_rows($articles);
 <body>
     <h1>掲示版</h1>
     <input type="button" name="new" value="新規作成" class="new" onclick="location.href='./new.php'">
-    <?php if (empty($articlesCount)) { ?>
+    <?php if (count($articles) < 1) { ?>
     <p>記事がありません。新規作成ボタンから作成してください。</p>
     <?php } else { ?>
     <table>
